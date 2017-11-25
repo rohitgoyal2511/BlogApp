@@ -1,0 +1,27 @@
+<div>
+  <app-upper-nav></app-upper-nav>
+</div>
+
+<div class="container">
+  <h1>Add New Post</h1>
+  <form>
+    <div class="form-group">
+      <label for="exampleInputEmail1"><h2>Title</h2></label>
+      <input type="text" class="form-control input-lg" id="exampleInputEmail1" placeholder="Enter title" name="title"
+             [(ngModel)]="title">
+    </div>
+
+    <div class="form-group">
+      <label for="exampleTextBody"><h2>Body</h2></label>
+      <textarea class="form-control input-lg" id="exampleTextBody" rows="7" name="body" [(ngModel)]="body"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleInputURL"><h2>Featured Image URL</h2></label>
+      <input type="text" class="form-control input-lg" id="exampleInputURL" placeholder="Enter URL here" name="url"
+             [(ngModel)]="URL">
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-lg" (click)="clicked()">Submit</button>
+  </form>
+</div>

@@ -1,0 +1,56 @@
+<div>
+  <app-upper-nav></app-upper-nav>
+</div>
+
+<!--<form class = "filter">
+  <label><h3>Search blog by title name</h3></label> &emsp;
+  <input type="text" name="search" placeholder="Title.." [(ngModel)] = "term">
+</form>-->
+
+<div class="content">
+  <div class="container ">
+    <div class="row">
+      <ul class="post-grid" ng-show="blogs.isSelected('blogs')">
+        <li *ngFor="let row of blogs; let i=index" class="col-sm-3" id={{row.secretKey}}>
+          <div (click)="disc(row)">
+            <h1 id="title">{{row.title}}</h1>
+            <p>{{row.body | truncatePipe : 140}}</p>
+          </div>
+          <div>
+            <span *ngIf="!(likeBlogs.indexOf(row._id)>=0)"><span class="glyphicon glyphicon-heart"
+                                                                 (click)="like( row._id)"></span></span>
+            <span *ngIf="(likeBlogs.indexOf(row._id)>=0)"><span class="glyphicon glyphicon-thumbs-up"
+                                                                (click)="dislike( row._id)"></span></span>
+            <span *ngIf="author == row.author"><span class="glyphicon glyphicon-trash f_right_trash"
+                                                     (click)="trash( row._id)"></span></span>
+            <span *ngIf="author == row.author"><span class="glyphicon glyphicon-pencil f_right_pencil"
+                                                     (click)="update( row)"></span></span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <!-- Trigger the modal with a button -->
+      <button type="button" class="btn btn-info btn-lg invisible" data-toggle="modal" data-target="#myModal"
+              id="trash"></button>
+
+      <!-- Modal -->
+      <div class="modal fade align" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+          <!-- Modal content-->
+          <div class="modal-content backgrd">
+            <div class="modal-body">
+              <p>Are You Sure you want to delete this blog?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal" (click)="delete()">Delete</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>

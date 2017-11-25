@@ -1,0 +1,21 @@
+<div class="topbar">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-3">
+        <a [routerLink]="['/']"><h1 class="push-left">{{title}}</h1></a>
+      </div>
+      <div class="col-sm-5"></div>
+      <div class="col-sm-4">
+        <nav role='navigation' class="push-right">
+          <ul>
+            <li><a [routerLink]="['/blog']"><h3 class="left1">See All Posts // </h3></a></li>
+            <li><a [routerLink]="['/newBlog']"><h3 class="left2"> Add New Post</h3></a></li>
+            <li class="seperate"><h3 (click)="logout()">Logout</h3></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>
+
+

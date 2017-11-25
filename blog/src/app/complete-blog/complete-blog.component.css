@@ -1,0 +1,28 @@
+.container {
+  margin-top: 1%;
+  width: 90%;
+}
+
+img {
+  width: 100%;
+  margin-top: 1%;
+  height: 50%;
+}
+
+h2 {
+  color: #3a8bab;
+  font-weight: bold;
+}
+
+.author {
+  margin-top: 1%;
+}
+
+p {
+  font-size: x-large;
+  text-align: justify;
+}
+
+.body {
+  font-family: 'Arimo', sans-serif;
+}

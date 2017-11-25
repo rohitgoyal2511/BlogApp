@@ -1,0 +1,25 @@
+.topbar {
+  background: #79B9D2;
+  color: white;
+  width: 100%;
+  z-index: 9999;
+  padding: 7px 20px;
+}
+
+h1 {
+  cursor:pointer;
+  padding : 3%;
+  color : white;
+  text-align: center;
+}
+
+.btsp{
+  width:60%;
+  margin-top: 5%;
+  margin-left: 25%;
+}
+
+.btn{
+  margin-left: 15%;
+}
+
